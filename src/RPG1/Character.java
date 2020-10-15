@@ -24,6 +24,7 @@ public class Character {
 
     // Generate Stats
     public void generateCharacter() {
+        
         Random random = new Random();
         for (int i = 0; i < 300; i+=1) {
             int randStat = random.nextInt(5);
