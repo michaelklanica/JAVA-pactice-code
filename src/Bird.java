@@ -4,8 +4,10 @@ public class Bird extends Animal{
         super(aName, anAge, aWeight);
     }
 
-    public void fly() {
-        System.out.println("Flying...");
+    @Override
+    public void move() {
+        System.out.println(this.name + " is flapping wings.");
     }
+
 
 }

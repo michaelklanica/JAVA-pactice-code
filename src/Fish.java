@@ -4,8 +4,13 @@ public class Fish extends Animal{
         super(aName, anAge, aWeight);
     }
 
+    @Override
+    public void move() {
+        System.out.println(this.name + " is swimming fast");
+    }
+
     public void swim() {
-        System.out.println("Swimming...");
+        System.out.println(this.name + " is swimming...");
     }
 
 }
