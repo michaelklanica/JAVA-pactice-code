@@ -1,11 +1,7 @@
 package contactsmanagerCLIapp;
 
-
-import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
-
-import static contactsmanagerCLIapp.Contact.*;
 
 public class Application {
 
@@ -29,16 +25,20 @@ public class Application {
         // LIST OF OPTIONS
         switch (menuOption) {
             case 1:
-                viewContacts();
+                System.out.println("View Contacts");
+//                viewContacts();
                 break;
             case 2:
-                addContact();
+                System.out.println("Add a Contact");
+//                addContact();
                 break;
             case 3:
-                searchContacts();
+                System.out.println("Search Contacts");
+//                searchContacts();
                 break;
             case 4:
-                deleteContact();
+                System.out.println("Delete a Contact");
+//                deleteContact();
                 break;
             case 5:
                 System.out.println("EXITING...");
