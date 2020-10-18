@@ -32,7 +32,9 @@ public class Contact {
         String firstName = input.nextLine();
         System.out.print("\nEnter the phone number: ");
         String phoneNumber = input.nextLine();
-
+        Contact contact1 = new Contact(firstName, lastName, phoneNumber);
+        contactList.putIfAbsent(firstName, contact1);
+        System.out.println(contactList.keySet());
     }
 
     public static void searchContacts() {

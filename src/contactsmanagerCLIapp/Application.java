@@ -30,7 +30,7 @@ public class Application {
                 break;
             case 2:
                 System.out.println("Add a Contact");
-//                addContact();
+                Contact.addContact();
                 break;
             case 3:
                 System.out.println("Search Contacts");
