@@ -1,5 +1,8 @@
 package RPG1;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class Character {
 
     private String name;
@@ -25,9 +28,13 @@ public class Character {
         this.hitPoints = hitPoints;
     }
 
+
     public static void main(String[] args) {
 
-        Character player1 = new Character("Al", 50);
+
+
+
+        Character player1 = new Character("Al", 100);
 
         System.out.println("player1.getName() = " + player1.getName());
         System.out.println("player1.getHitPoints() = " + player1.getHitPoints());
