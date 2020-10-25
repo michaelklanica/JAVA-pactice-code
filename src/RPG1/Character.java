@@ -6,6 +6,7 @@ public class Character {
 
     public String name;
     public String race;
+    public String subRace;
     public String clss;
     public int level;
     public String alignment;
@@ -27,46 +28,6 @@ public class Character {
 
 
 
-
-
-    private int hitPoints;
-
-    public int getHitPoints() {
-        return hitPoints;
-    }
-
-    public void setHitPoints(int hitPoints) {
-        this.hitPoints = hitPoints;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getName() {
-        return name;
-    }
-    public Character(String name, int hitPoints) {
-        this.name = name;
-        this.hitPoints = hitPoints;
-    }
-
-
-    public static void main(String[] args) {
-        String name = chooseName();
-        String race = chooseRace();
-
-        System.out.println("name = " + name);
-        System.out.println("race = " + race);
-
-
-        Character newPlayer = new Character(name, 100);
-        System.out.println("player1.getName() = " + newPlayer.getName());
-        System.out.println("player1.getHitPoints() = " + newPlayer.getHitPoints());
-
-        System.out.println("diceRoll(6, 4) = " + Dice.diceRoll(6, 4));
-
-    }
     public static String chooseName() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter the character's name: ");
@@ -96,6 +57,48 @@ public class Character {
                 chooseRace();
         }
         return race;
+    }
+
+    public static String chooseSubRace(String race) {
+        Scanner scan = new Scanner(System.in);
+        String subRace = null;
+        if (race.equals("Dwarf")) {
+            System.out.println("Choose a sub-race:\n1. Hill Dwarf\n2. Mountain Dwarf");
+            int choice = scan.nextInt();
+            switch (choice) {
+                case 1:
+                    subRace = "Hill Dwarf";
+                    break;
+                case 2:
+                    subRace = "Mountain Dwarf";
+                    break;
+            }
+        } else if (race.equals("Elf")) {
+            System.out.println("Choose a sub-race:\n1. Wood Elf\n2. High Elf");
+            int choice = scan.nextInt();
+            switch (choice) {
+                case 1:
+                    subRace = "Wood Elf";
+                    break;
+                case 2:
+                    subRace = "High Elf";
+                    break;
+            }
+        } else if (race.equals("Halfling")) {
+            System.out.println("Choose a sub-race:\n1. Lightfoot\n2. Stout");
+            int choice = scan.nextInt();
+            switch (choice) {
+                case 1:
+                    subRace = "Lightfoot";
+                    break;
+                case 2:
+                    subRace = "Stout";
+                    break;
+            }
+        } else {
+            subRace = "none";
+        }
+        return subRace;
     }
 
 
