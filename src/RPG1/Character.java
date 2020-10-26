@@ -1,5 +1,6 @@
 package RPG1;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Character {
@@ -25,7 +26,6 @@ public class Character {
     public int maxHitPoints;
     public int currentHitPoints;
     public int temporaryHitPoints;
-
 
 
     public static String chooseName() {
@@ -101,6 +101,13 @@ public class Character {
         return subRace;
     }
 
+    public static ArrayList generateBaseAttributeScores() {
+        ArrayList<Integer> attributeArray = new ArrayList<>();
+        for (int i = 0; i <= 5; i++) {
+            attributeArray.add(Dice.diceRoll(6, 3));
+        }
+        return attributeArray;
+    }
 
 }
 

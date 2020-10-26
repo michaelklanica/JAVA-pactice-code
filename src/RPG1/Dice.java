@@ -13,7 +13,6 @@ public class Dice {
 
         for (int i = 0; i < numOfRolls; i++) {
             roll = random.nextInt(sides) + 1;
-            System.out.println("Your rolled: " + roll);
             total += roll;
         }
         return total;
